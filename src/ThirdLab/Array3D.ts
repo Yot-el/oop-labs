@@ -30,7 +30,7 @@ export class Array3D {
 
       for (let j = 0; j < this._dim2; j++) {
         for (let k = 0; k < this._dim3; k++) {
-          resultArr[j][k] = (this.getValue(coord, j, k));
+          resultArr[j][k] = this.getValue(coord, j, k);
         }
       }
     }

@@ -12,6 +12,8 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  --margin: 20px;
 }
 
 a {
@@ -43,11 +45,10 @@ h2 {
 #app {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 20px;
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  width: 100vw;
+  height: 100vh;
 }
 
 .logo {
@@ -102,7 +103,7 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
-
+/* 2 lab */
 .vector {
   position: relative;
 }
@@ -145,4 +146,112 @@ button:focus-visible {
 
 .selects__operation {
   align-self: center;
+}
+
+/* 4 lab */
+.container {
+  width: calc(80vw - var(--margin)*2);
+  margin: 0 auto;
+}
+
+.shortcuts {
+  padding: 15px 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 10px;
+}
+
+.shortcuts__active {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.shortcuts__list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  width: 60%;
+  justify-content: end;
+  list-style: none;
+  gap: 50px;
+}
+
+.shortcut__item {
+  border-radius: 8px;
+  padding: 15px 20px;
+  font-size: 20px;
+  line-height: 1.5em;
+  border: 1px solid #646cff;
+  animation: defaultItemAnimation 1s ease;
+}
+.shortcut__item--zoom-in {
+  animation: zoomItemAnimation 1s ease;
+}
+
+@keyframes defaultItemAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomItemAnimation {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.shortcuts-actions {
+  display: flex;
+  flex-direction: column;
+}
+
+.shortcuts-actions__title {
+  margin: 0 0 5px 0;
+}
+
+.shortcuts-actions__tabs {
+  display: flex;
+}
+
+.shortcuts-actions__tab {
+  display: flex;
+}
+
+.shortcuts-actions__tab-input {
+  display: none;
+}
+
+.shortcuts-actions__tab-input:checked ~ .shortcuts-actions__tab-label {
+  background-color: #646cff;
+}
+
+.shortcuts-actions__tab-label {
+  cursor: pointer;
+  padding: 5px;
+  background-color: #1a1a1a;
+}
+
+.shortcuts-actions__tab-content-wrapper {
+  background-color: #1a1a1a;
+  padding: 10px 5px 5px 5px;
+}
+
+.shortcuts-actions__tab-content {
+  display: none;
+}
+
+.shortcuts-actions__tab-content--active {
+  display: flex;
+  align-items: center;
+  gap: 3px;
 }

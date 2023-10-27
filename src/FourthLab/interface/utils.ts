@@ -7,7 +7,7 @@ export const debounce = (callback: Function, delay: number) => {
   };
 }
 
-export const compateSets = <T>(first: Set<T>, second: Set<T>): boolean => {
+export const compareSets = <T>(first: Set<T>, second: Set<T>): boolean => {
   if (first.size !== second.size) {
     return false;
   }

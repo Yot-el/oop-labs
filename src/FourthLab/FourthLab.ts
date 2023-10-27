@@ -19,12 +19,12 @@ removeShortcutButton?.addEventListener('click', () => {
 const addShortcutButton = document.querySelector('#sh-button-add');
 const addShortcutInput = <HTMLInputElement>document.querySelector('#sh-input-add');
 const addShortcutSelect = document.querySelector('#sh-select-add');
+
 addShortcutButton?.addEventListener('click', () => {
   const stringKeys = addShortcutInput.value;
   const functionName = addShortcutSelect?.querySelector('option:checked')?.getAttribute('value') ?? "shortcut-default";
 
-  const shortcut = new KeyboardShortcut(...parseKeysString(stringKeys));
-  shortcut.setCommand(commands[functionName]);
+  const shortcut = new KeyboardShortcut(commands[functionName], ...parseKeysString(stringKeys));
   keyboard.addShortcut(shortcut);
   updateRemoveSelect('add', stringKeys);
 })

@@ -255,3 +255,35 @@ button:focus-visible {
   align-items: center;
   gap: 3px;
 }
+
+/*5 lab*/
+.sign-in,
+.sign-up {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.error {
+  color:  #C70039;
+}
+
+.user-wrapper {
+  display: flex;
+  gap: 20px;
+}
+
+.user {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  border: 1px solid #535bf2;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.user__logout {
+  margin: 20px 0 0 0;
+  align-self: end;
+}

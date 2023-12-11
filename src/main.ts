@@ -3,4 +3,5 @@ import './style.css'
 // import { Array3D } from './ThirdLab/Array3D';
 // import './FirstLab/Calcer';
 // import './FourthLab/FourthLab';
-import './FifthLab/FifthLab';
+// import './FifthLab/FifthLab';
+import './SixthLab/SixthLab';

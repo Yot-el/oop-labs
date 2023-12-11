@@ -13,10 +13,10 @@ class MacInput implements CustomInput {
 }
 
 export class MacFactory implements ControlFactory {
-  createButton(): CustomButton {
+  public createButton(): CustomButton {
     return new MacButton();
   }
-  createInput(): CustomInput {
+  public createInput(): CustomInput {
     return new MacInput();
   }
 }

@@ -13,10 +13,10 @@ class WindowsInput implements CustomInput {
 }
 
 export class WindowsFactory implements ControlFactory {
-  createButton(): CustomButton {
+  public createButton(): CustomButton {
     return new WindowsButton();
   }
-  createInput(): CustomInput {
+  public createInput(): CustomInput {
     return new WindowsInput();
   }
 }

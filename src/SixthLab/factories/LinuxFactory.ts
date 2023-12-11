@@ -13,10 +13,10 @@ class LinuxInput implements CustomInput {
 }
 
 export class LinuxFactory implements ControlFactory {
-  createButton(): CustomButton {
+  public createButton(): CustomButton {
     return new LinuxButton();
   }
-  createInput(): CustomInput {
+  public createInput(): CustomInput {
     return new LinuxInput();
   }
 }

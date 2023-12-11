@@ -22,6 +22,11 @@ const getFactoryByOS = (): ControlFactory => {
   throw new Error("Unknown OS");
 }
 
-const app = new App(getFactoryByOS());
-app.click();
-app.change();
+try {
+  const app = new App(getFactoryByOS());
+  app.click();
+  app.change();
+}
+catch (e: any) {
+  window.alert(e.message);
+}
